@@ -1,0 +1,13 @@
+name = "interview"
+main = "src/worker.js"
+compatibility_date = "2025-06-05"
+account_id = "4379c622d4ddb507f53c6e915c3dc343"
+
+[assets]
+directory = "."
+not_found_handling = "single-page-application"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "interview-console-db"
+database_id = "560ea218-124b-4666-888a-7283e66a58d6"

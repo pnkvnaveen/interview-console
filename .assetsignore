@@ -1,0 +1,9 @@
+.claude/
+.wrangler/
+interviewer-dashboard/
+migrations/
+src/
+design_bundle.tar.gz
+design_extracted.html
+wrangler.toml
+.assetsignore
