@@ -104,9 +104,9 @@ function SettingsScreen({ data, savedData, onSave, onClose }) {
 
             {topic.questions.map((q, qi) => (
               <div className="set-q" key={q.id}
-                draggable onDragStart={() => onDragStart(ti, qi)}
                 onDragOver={e => e.preventDefault()} onDrop={() => onDrop(ti, qi)}>
-                <span className="set-q-grip" title="Drag to reorder"><Icon name="grip" size={15} /></span>
+                <span className="set-q-grip" title="Drag to reorder"
+                  draggable onDragStart={() => onDragStart(ti, qi)}><Icon name="grip" size={15} /></span>
                 <AutoResizeTextarea className="qi" value={q.text} placeholder="Question text..."
                   onChange={e => editQ(ti, qi, 'text', e.target.value)} />
                 <input className="qi lbl" value={q.label} placeholder="short label for notes"
