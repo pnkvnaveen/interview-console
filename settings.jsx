@@ -17,7 +17,7 @@ function SettingsScreen({ data, savedData, onSave, onClose }) {
     return () => window.removeEventListener('beforeunload', handler);
   }, [hasChanges]);
 
-  const mutate = (fn) => { const d = window.clone(draft); fn(d); setDraft(d); setSaved(false); };
+  const mutate = (fn) => { setDraft(prev => { const d = window.clone(prev); fn(d); return d; }); setSaved(false); };
 
   // ---- topics ----
   const addTopic = () => mutate(d => d.push({ id: window.uid('t'), name: 'New Topic', questions: [] }));
